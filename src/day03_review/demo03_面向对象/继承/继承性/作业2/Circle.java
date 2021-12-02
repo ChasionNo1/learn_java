@@ -4,7 +4,7 @@ public class Circle {
     private double radius;
 
     public Circle(double radius) {
-        this.radius = 1;
+        this.radius = radius;
     }
 
     public double getRadius() {

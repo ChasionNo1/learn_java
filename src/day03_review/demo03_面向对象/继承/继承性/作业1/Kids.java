@@ -18,4 +18,10 @@ public class Kids extends ManKind {
     public void printAge(){
         System.out.println(yearsOld);
     }
+
+    @Override
+    public void employeed(){
+        super.employeed();
+        System.out.println("子类重写父类方法");
+    }
 }
