@@ -1,0 +1,37 @@
+package day03_review.demo03_面向对象.多态.作业2;
+
+public class MyRectangle extends GeometricObject{
+    private double width;
+    private double height;
+
+    public MyRectangle(double width, double height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    public double getWidth() {
+        return width;
+    }
+
+    public void setWidth(double width) {
+        this.width = width;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+    @Override
+    public double findArea(){
+        return width * height;
+    }
+
+    @Override
+    public void showInfo(){
+        System.out.println("我是矩形");
+    }
+}
