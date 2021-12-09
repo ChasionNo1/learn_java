@@ -1,6 +1,4 @@
-package day02_review.家庭收支软件;
-
-import day02_review.家庭收支软件.Utility;
+package 项目.项目一家庭收支软件;
 
 /*
 模拟实现基于文本界面的《家庭记账软件》。

@@ -1,4 +1,4 @@
-package day03_review.demo03_面向对象.项目二客户信息管理软件;
+package 项目.项目二客户信息管理软件;
 
 public class Customer {
     private String name;

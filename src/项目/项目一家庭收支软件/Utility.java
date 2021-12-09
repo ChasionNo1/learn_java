@@ -1,4 +1,4 @@
-package day02_review.家庭收支软件;
+package 项目.项目一家庭收支软件;
 
 import java.util.Scanner;
 /**

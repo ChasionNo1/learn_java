@@ -1,10 +1,5 @@
 package day03_review.demo03_面向对象.面向对象中.其他类的使用.Object类.作业1;
 
-import com.sun.org.apache.xpath.internal.operations.Or;
-import day03_review.demo03_面向对象.项目二客户信息管理软件.Customer;
-
-import java.util.Objects;
-
 /*
 1.编写Order类，有int型的orderId，String型的orderName，相应的
 getter()和setter()方法，两个参数的构造器，重写父类的equals()方法：
