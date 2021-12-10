@@ -1,4 +1,4 @@
-package day04_review.demo04_ArrayList类;
+package day04_review.other.demo04_ArrayList类;
 /*
 * 对象数组：数组元素是对象
 *

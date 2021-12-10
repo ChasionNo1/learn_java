@@ -1,5 +1,4 @@
-package day04_review.demo01_Scanner类;
-import jdk.nashorn.internal.ir.CallNode;
+package day04_review.other.demo01_Scanner类;
 
 import java.util.Scanner;
 /*

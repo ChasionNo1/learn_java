@@ -1,4 +1,4 @@
-package day04_review.demo02_匿名对象;
+package day04_review.other.demo02_匿名对象;
 
 import java.util.Scanner;
 

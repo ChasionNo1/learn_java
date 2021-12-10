@@ -1,4 +1,4 @@
-package day04_review.demo03_Random类;
+package day04_review.other.demo03_Random类;
 
 import java.util.Random;
 

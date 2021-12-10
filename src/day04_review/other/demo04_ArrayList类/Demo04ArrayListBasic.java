@@ -1,4 +1,4 @@
-package day04_review.demo04_ArrayList类;
+package day04_review.other.demo04_ArrayList类;
 /*
 * 泛型只能是引用类型，不能是基本类型，如：int
 * 集合里保存的都是地址值

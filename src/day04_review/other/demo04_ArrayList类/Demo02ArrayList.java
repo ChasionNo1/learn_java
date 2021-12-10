@@ -1,4 +1,4 @@
-package day04_review.demo04_ArrayList类;
+package day04_review.other.demo04_ArrayList类;
 
 import java.util.ArrayList;
 
