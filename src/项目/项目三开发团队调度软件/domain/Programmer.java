@@ -6,10 +6,9 @@ public class Programmer extends Employee {
     private int memberId;
     private Status status = Status.FREE;
     private Equipment equipment;
-
-    public Programmer(int id, String name, int age, double salary, Status status, Equipment equipment) {
+    public Programmer(){}
+    public Programmer(int id, String name, int age, double salary, Equipment equipment) {
         super(id, name, age, salary);
-        this.status = status;
         this.equipment = equipment;
     }
 
@@ -38,7 +37,7 @@ public class Programmer extends Employee {
     }
 
     private String showProgrammer() {
-        return super.getMemberInfo() + "\t程序员\t" + Status.FREE + "\t\t\t\t\t\t" + equipment.getDescription();
+        return super.getMemberInfo() + "\t程序员\t" + getStatus() + "\t\t\t\t\t\t" + equipment.getDescription();
     }
 
     @Override

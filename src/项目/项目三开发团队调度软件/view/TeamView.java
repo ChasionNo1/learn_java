@@ -10,7 +10,6 @@ import 项目.项目三开发团队调度软件.view.TSUtility;
 import java.util.Scanner;
 
 public class TeamView {
-    int count = 0;
     public static void main(String[] args) {
         TeamView teamView = new TeamView();
         teamView.enterMainMenu();
@@ -83,10 +82,10 @@ public class TeamView {
         System.out.print("输入要添加的员工ID:");
         int addId = TSUtility.readInt();
         try {
+            // 如果不是程序员，不能添加，也没有memberId的属性
             Employee employee = listService.getEmployees(addId);
-            Programmer programmer = (Programmer) employee;
-            programmer.setMemberId(++count);
-            teamService.addMember(programmer);
+//            ((Programmer) employee).setMemberId(++count);
+            teamService.addMember(employee);
 
             System.out.println("添加成功");
         } catch (TeamException e) {

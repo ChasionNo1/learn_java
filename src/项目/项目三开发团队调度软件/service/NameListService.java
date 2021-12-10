@@ -10,7 +10,6 @@ public class NameListService {
         // 根据项目提供的Data类构建相应大小的employees数组
         this.employees = new Employee[Data.EMPLOYEES.length];
         //******************memberId**********************//
-        int memberId = 0;
         for (int i = 0; i < Data.EMPLOYEES.length; i++) {
             // 获取通用属性
             int type = Integer.parseInt(Data.EMPLOYEES[i][0]);
@@ -30,17 +29,17 @@ public class NameListService {
                     break;
                 case Data.PROGRAMMER:
                     // int id, String name, int age, double salary, int memberId, Status status, Equipment equipment
-                    employees[i] = new Programmer(id, name, age, salary, Status.FREE, createEquipment(i));
+                    employees[i] = new Programmer(id, name, age, salary, createEquipment(i));
                     break;
                 case Data.DESIGNER:
                     bonus = Double.parseDouble(Data.EMPLOYEES[i][5]);
                     // int id, String name, int age, double salary, int memberId, Status status, Equipment equipment, double bonus
-                    employees[i] = new Designer(id, name, age, salary, Status.FREE, createEquipment(i), bonus);
+                    employees[i] = new Designer(id, name, age, salary, createEquipment(i), bonus);
                     break;
                 case Data.ARCHITECT:
                     bonus = Double.parseDouble(Data.EMPLOYEES[i][5]);
                     stock = Integer.parseInt(Data.EMPLOYEES[i][6]);
-                    employees[i] = new Architect(id, name, age, salary, Status.FREE, createEquipment(i), bonus, stock);
+                    employees[i] = new Architect(id, name, age, salary, createEquipment(i), bonus, stock);
                     break;
             }
         }
