@@ -42,6 +42,11 @@ class SellTicket implements Runnable{
         synchronized (this){
 //        synchronized (obj){
             while (ticket > 0){
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 System.out.println("ticket:" + ticket);
                 ticket--;
             }
