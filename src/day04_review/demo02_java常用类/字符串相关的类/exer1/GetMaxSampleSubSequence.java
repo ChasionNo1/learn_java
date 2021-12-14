@@ -11,20 +11,28 @@ package day04_review.demo02_java常用类.字符串相关的类.exer1;
  */
 public class GetMaxSampleSubSequence {
     public static void main(String[] args) {
-        String subSeq = getSubSeq("abcwerthelloyuiodef", "cvhellobnm");
+        StringBuilder subSeq = getSubSeq("abcwerthelloeeyuiodef", "abcwevhellobnm");
         System.out.println(subSeq);
     }
 
-    public static String getSubSeq(String source, String sub) {
+    public static StringBuilder getSubSeq(String source, String sub) {
         // 字串的长度依次递减，同时滑动窗口去搜索
+        boolean isFlag = false;
+        StringBuilder stringBuilder = new StringBuilder();
         for (int i = sub.length(); i > 0; i--) {
             for (int j = 0; j <= sub.length() - i; j++) {
-                String str = sub.substring(j, i);
-                if (source.contains(str)){
-                    return str;
+                String str = sub.substring(j, i + j);
+                // 没有考虑多个相同长度的字串
+                if (source.contains(str)) {
+                    stringBuilder.append(str + " ");
+                    isFlag = true;
+                }
+                if (isFlag && j == (sub.length() - i)){
+                    return stringBuilder;
                 }
             }
         }
-        return "没有找到";
+        return new StringBuilder("没有找到");
     }
 }
+
