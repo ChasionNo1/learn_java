@@ -52,6 +52,7 @@ public class Goods implements Comparable {
             } else if (this.price < goods.price) {
                 return -1;
             } else {
+                // 如果一个属性相同，再比较第二个属性值
                 return -1;
             }
 //            方式二
