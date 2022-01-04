@@ -40,11 +40,12 @@ public class TeamService {
         if (isExist(p)) {
             throw new TeamException("该成员已在团队里");
         }
-        if (p.getStatus().equals(Status.BUSY)) {
-            throw new TeamException("该成员在别的团队里");
-        }
-        if (p.getStatus().equals(Status.VOCATION)) {
-            throw new TeamException("该成员在休假");
+        Status status = p.getStatus();
+        switch (status){
+            case BUSY:
+                throw new TeamException("该成员在别的团队里");
+            case VOCATION:
+                throw new TeamException("该成员在休假");
         }
         int numOfArch = 0;
         int numOfDsgn = 0;
