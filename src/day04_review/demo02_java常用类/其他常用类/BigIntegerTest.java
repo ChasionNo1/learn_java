@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.math.RoundingMode;
 
 /**
  * @program: test
@@ -59,8 +60,8 @@ public class BigIntegerTest {
         BigDecimal bd2 = new BigDecimal("11");
         System.out.println(bi);
         // System.out.println(bd.divide(bd2));
-        System.out.println(bd.divide(bd2, BigDecimal.ROUND_HALF_UP));
+        System.out.println(bd.divide(bd2, RoundingMode.HALF_UP));
         // 保留15位，默认3位
-        System.out.println(bd.divide(bd2, 15, BigDecimal.ROUND_HALF_UP));
+        System.out.println(bd.divide(bd2, 15, RoundingMode.HALF_UP));
     }
 }
