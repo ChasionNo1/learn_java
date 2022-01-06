@@ -3,10 +3,7 @@ package day04_review.demo04_java集合.集合框架概述;
 import org.omg.CORBA.PUBLIC_MEMBER;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Date;
+import java.util.*;
 
 /**
  * @program: test
@@ -109,6 +106,23 @@ public class CollectionTest {
         collection4.add(234);
         System.out.println(collection.equals(collection4));
 
+        //11. hashCode():返回集合对象的哈希值
+        System.out.println(collection.hashCode());
+
+        //12. toArray():转换成对象数组
+        Object[] objects = collection.toArray();
+
+        // 13. array --> collection
+        List<String> strings = Arrays.asList("AA", "BB");
+        System.out.println(strings);
+
+        List<int[]> ints = Arrays.asList(new int[]{123, 234});// 将整个数组作为一个元素
+        System.out.println(ints.size());
+        System.out.println(ints);
+        List<Integer> integers = Arrays.asList(123, 234);
+        System.out.println(integers.size());
+
+        // 14.iterator():返回迭代器对象，用于集合遍历
 
 
     }
