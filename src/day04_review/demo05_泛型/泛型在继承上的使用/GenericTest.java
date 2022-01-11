@@ -22,7 +22,7 @@ public class GenericTest {
     /*
    1. 泛型在继承方面的体现
 
-     虽然类A是类B的父类，但是G<A> 和G<B>二者不具备子父类关系，二者是并列关系。
+     虽然类A是类B的父类，但是G<A>和G<B>二者不具备子父类关系，二者是并列关系。
 
       补充：类A是类B的父类，A<G> 是 B<G> 的父类
 
@@ -39,7 +39,7 @@ public class GenericTest {
         arr1 = arr2;
         //编译不通过
 //        Date date = new Date();
-//        str = date;
+////        str = date;
         List<Object> list1 = null;
         List<String> list2 = new ArrayList<String>();
         //此时的list1和list2的类型不具有子父类关系
@@ -134,12 +134,14 @@ public class GenericTest {
 
     /*
     3.有限制条件的通配符的使用。
-        ? extends A:
+        ? extends A:   小于等于
                 G<? extends A> 可以作为G<A>和G<B>的父类，其中B是A的子类
 
-        ? super A:
+        ? super A:    大于等于
                 G<? super A> 可以作为G<A>和G<B>的父类，其中B是A的父类
 
+       带有超类型限定的通配符允许写入一个泛型对象
+       带有子类型限定的通配符允许读取一个泛型对象
      */
     @Test
     public void test4(){
@@ -147,7 +149,7 @@ public class GenericTest {
         List<? extends Person> list1 = null;
         List<? super Person> list2 = null;
 
-        List<Person> list3 = new ArrayList<Person>();
+        List<Student> list3 = new ArrayList<Student>();
         List<Person> list4 = new ArrayList<Person>();
         List<Object> list5 = new ArrayList<Object>();
 
@@ -162,12 +164,16 @@ public class GenericTest {
         //读取数据：
         list1 = list3;
         Person p = list1.get(0);
-        //编译不通过
+        //编译不通过，
         //Student s = list1.get(0);
+        // 直接将父类赋值给子类不行，加上强转可以
+        Person p1 = new Person();
+        Student t = null;
+        t = (Student) p1;
 
         list2 = list4;
         Object obj = list2.get(0);
-        ////编译不通过
+        ////编译不通过， list中最小类为Person，当大类赋值给小类时，需要强转，不能直接赋值
 //        Person obj = list2.get(0);
 
         //写入数据：
@@ -176,7 +182,9 @@ public class GenericTest {
 
         //编译通过
         list2.add(new Person());
-        list2.add(new Person());
+        list2.add(new Student());
+        // 编译不通过
+//        list2.add(new Object());
 
     }
 }
