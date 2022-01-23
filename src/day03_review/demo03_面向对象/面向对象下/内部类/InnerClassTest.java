@@ -53,6 +53,7 @@ class Person{
         int num = 10;
         // 方法内部类
         class AA{
+            // 局部内部类的方法调用某个形参时，需声明为final的
             public void method(){
 //                不能再赋值了
 //                num = 20;
