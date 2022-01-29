@@ -4,10 +4,12 @@ import org.testng.annotations.Test;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.Properties;
 
 /**
  * 了解类的加载器
+ *
  * @program: test
  * @author: chasion
  * @create: 2022-01-15 14:40
@@ -50,5 +52,14 @@ public class ClassLoaderTest {
         String name = properties.getProperty("name");
         String password = properties.getProperty("password");
         System.out.println("name=" + name + ",password=" + password);
+
+//        InputStream is1 = classLoader.getResourceAsStream("hello.txt");
+//        InputStreamReader isr = new InputStreamReader(is1);
+//        char[] cbuf = new char[10];
+//        int len;
+//        while ((len = isr.read(cbuf))!= -1){
+//            System.out.println(new String(cbuf, 0, len));
+//        }
+
     }
 }
