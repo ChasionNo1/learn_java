@@ -25,7 +25,7 @@ public class URLTest2 {
             urlConnection.connect();
 
             is = urlConnection.getInputStream();
-            fos = new FileOutputStream("kears.jpeg");
+            fos = new FileOutputStream("keras.jpeg");
 
             byte[] buffer = new byte[1024];
             int len;

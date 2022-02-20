@@ -1,5 +1,7 @@
 package day04_review.demo09_java8新特性.方法引用与构造器引用;
 
+
+
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
@@ -36,7 +38,7 @@ public class ConstructorRefTest {
         System.out.println(sup1.get());
 
         System.out.println("*******************");
-        // 格式：ClassName::new
+
         Supplier<Employee>  sup2 = Employee :: new;
         System.out.println(sup2.get());
     }

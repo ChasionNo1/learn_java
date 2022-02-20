@@ -1,5 +1,7 @@
 package day04_review.demo09_java8新特性.方法引用与构造器引用;
 
+
+
 import org.testng.annotations.Test;
 
 import java.io.PrintStream;

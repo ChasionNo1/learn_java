@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 /**
  * * java内置的4大核心函数式接口
@@ -65,5 +66,17 @@ public class FunctionTest {
             }
         }
         return strings;
+    }
+
+    @Test
+    public void test3(){
+        Supplier<Integer> integerSupplier = new Supplier<Integer>() {
+            @Override
+            public Integer get() {
+                return 12;
+            }
+        };
+        Integer integer = integerSupplier.get();
+        System.out.println(integer);
     }
 }

@@ -7,7 +7,7 @@ import java.util.Random;
 
 /**
  *
- *  通过发射创建对应的运行时类的对象
+ *  通过反射创建对应的运行时类的对象
  *
  * @program: test
  * @author: chasion

@@ -22,7 +22,7 @@ public class OtherStreamTest {
     System.in:标准的输入流，默认从键盘输入
     System.out:标准的输出流，默认从控制台输出
     1.2
-    System类的setIn(InputStream is) / setOut(PrintStream ps)方式重新指定输入和输出的流。
+    System类的setIn(InputStream is) / setOut(PrintStream ps)方法重新指定输入和输出的流。
 
     1.3练习：
     从键盘输入字符串，要求将读取到的整行字符串转成大写输出。然后继续进行输入操作，
@@ -35,6 +35,7 @@ public class OtherStreamTest {
     public static void main(String[] args) {
         BufferedReader br = null;
         try {
+            // 控制台是字节流，转换位字符流
             InputStreamReader isr = new InputStreamReader(System.in);
             br = new BufferedReader(isr);
 

@@ -18,5 +18,9 @@ public class demo10_Arrays {
         int idx = Arrays.binarySearch(arr1, 5);
         System.out.println(flag);
         System.out.println(idx);
+        // 数组的复制
+        char[] chars = {'a', 'b'};
+        char[] copy = Arrays.copyOf(chars, chars.length);
+        System.out.println(Arrays.toString(copy));
     }
 }

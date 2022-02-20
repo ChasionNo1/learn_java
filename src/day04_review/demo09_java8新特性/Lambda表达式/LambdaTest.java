@@ -13,6 +13,7 @@ public class LambdaTest {
 
     @Test
     public void test1() {
+        // 匿名内部类，实现接口
         Runnable runnable = new Runnable() {
             @Override
             public void run() {
