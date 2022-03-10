@@ -1,5 +1,7 @@
 package leetcode.哈希表;
 
+import java.util.HashSet;
+
 /**
  * @program: test
  * @author: chasion
@@ -16,4 +18,23 @@ package leetcode.哈希表;
  *
  */
 public class Demo202 {
+    public boolean isHappy(int n) {
+        HashSet<Integer> set = new HashSet<>();
+        while (n != 1 && !set.contains(n)){
+            set.add(n);
+            n = getNextNumber(n);
+        }
+        return n == 1;
+
+    }
+
+    public int getNextNumber(int n){
+        int sum = 0;
+        while (n > 0){
+            int temp = n % 10;
+            sum += temp * temp;
+            n /= 10;
+        }
+        return sum;
+    }
 }
