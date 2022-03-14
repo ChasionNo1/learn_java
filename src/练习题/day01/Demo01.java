@@ -10,10 +10,16 @@ import java.util.TreeSet;
  * @Date 2022/2/2 11:35
  **/
 public class Demo01 {
+    static int i;
+
+    public static void main(String[] args) {
+        System.out.println(i);
+    }
 
     @Test
     public void test1(){
         TreeSet<Integer> set = new TreeSet<>();
 //        set.subSet()
+
     }
 }
