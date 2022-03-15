@@ -2,6 +2,7 @@ package 练习题.day01;
 
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
 import java.util.TreeSet;
 
 /**
@@ -21,5 +22,18 @@ public class Demo01 {
         TreeSet<Integer> set = new TreeSet<>();
 //        set.subSet()
 
+    }
+    @Test
+    public void test2(){
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        for (int i = 0, j = list.size() - 1; i < j; i++, j--){
+            int temp = list.get(i);
+            list.set(i, list.get(j));
+            list.set(j, temp);
+        }
+        System.out.println(list);
     }
 }
