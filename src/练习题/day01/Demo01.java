@@ -36,4 +36,10 @@ public class Demo01 {
         }
         System.out.println(list);
     }
+
+    @Test
+    public void test3(){
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(null);
+    }
 }

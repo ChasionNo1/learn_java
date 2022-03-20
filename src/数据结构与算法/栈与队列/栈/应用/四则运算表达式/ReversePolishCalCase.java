@@ -25,7 +25,8 @@ public class ReversePolishCalCase {
 //        System.out.println("计算结果:"+ reversePolishCal.calculate(suffixExpressionList));
 
         //测试输入中缀表达式是否能计算成功
-        String infixExpression = "4*5-8+60+8/2";
+        String infixExpression = "1*2+(3/4-5*6)/7";
+
 
 
         List<String> infixExpressionList = reversePolishCal.toInfixExpression(infixExpression);
@@ -34,9 +35,9 @@ public class ReversePolishCalCase {
         for (String ele : suffixExpressionList2) {
             System.out.print(ele + " ");
         }
-        System.out.println();
-        //输出结果
-        System.out.println("计算结果:" + reversePolishCal.calculate(suffixExpressionList2));
+//        System.out.println();
+//        //输出结果
+//        System.out.println("计算结果:" + reversePolishCal.calculate(suffixExpressionList2));
 
 
     }
