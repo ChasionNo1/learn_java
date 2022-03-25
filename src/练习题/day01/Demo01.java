@@ -3,6 +3,8 @@ package 练习题.day01;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.TreeSet;
 
 /**
@@ -41,5 +43,22 @@ public class Demo01 {
     public void test3(){
         ArrayList<Integer> list = new ArrayList<>();
         list.add(null);
+    }
+
+    @Test
+    public void test4(){
+        List<List<Integer>> list = new ArrayList<>();
+        LinkedList<Integer> path = new LinkedList<>();
+        path.addLast(1);
+        path.addLast(2);
+//        list.add(path);
+        list.add(new ArrayList<>(path));
+        System.out.println(list);
+    }
+
+    @Test
+    public void test5(){
+        String s = "123";
+        System.out.println(s.substring(0, 2));
     }
 }
