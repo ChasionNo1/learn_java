@@ -20,7 +20,7 @@ public class MySqlTest {
 
     // 连接方式一
     @Test
-    public void test1(){
+    public void test1() {
         //1.提供java.sql.Driver接口实现类的对象
         Driver driver = null;
         try {
@@ -41,7 +41,7 @@ public class MySqlTest {
 
     // 连接方式二
     @Test
-    public void test2(){
+    public void test2() {
         try {
             // 1.获取Driver实现类对象：使用反射
             Class<?> clazz = Class.forName("com.mysql.cj.jdbc.Driver");
@@ -62,7 +62,7 @@ public class MySqlTest {
 
     // 使用DriverManager替换Driver
     @Test
-    public void test3(){
+    public void test3() {
         // 1.提供三个连接的基本信息：
         try {
             String url = "jdbc:mysql://localhost:3306/mydata";
@@ -83,7 +83,7 @@ public class MySqlTest {
 
     // 可以只是加载驱动，不用显示的注册驱动了。
     @Test
-    public void test4(){
+    public void test4() {
         // 1.提供三个连接的基本信息：
         try {
             String url = "jdbc:mysql://localhost:3306/mydata";
@@ -119,7 +119,7 @@ public class MySqlTest {
     // ① 实现了代码和数据的分离，如果需要修改配置信息，直接在配置文件中修改，不需要深入代码
     // ② 如果修改了配置信息，省去重新编译的过程。
     @Test
-    public void test5(){
+    public void test5() {
         try {
             //1.读取配置文件中的4个基本信息
             InputStream is = MySqlTest.class.getClassLoader().getResourceAsStream("jdbc.properties");
