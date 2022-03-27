@@ -9,7 +9,7 @@ import java.util.LinkedList;
  * @author: chasion
  * @create: 2022-03-13 21:01
  */
-public class Demo {
+public class Demo332_2 {
     @Test
     public void test1(){
         LinkedList<Integer> stack = new LinkedList<>();
