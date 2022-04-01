@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <!-- 配置User对象创建-->
-    <bean id="user" class="Spring5.day01入门.User"></bean>
+    <!--3 有参数构造注入属性-->
+    <bean id="order" class="Spring5.day02IOC操作Bean管理.xml方式.注入属性.Order">
+        <constructor-arg name="oname" value="电脑"></constructor-arg>
+
+        <constructor-arg name="address" value="china"></constructor-arg>
+    </bean>
 </beans>

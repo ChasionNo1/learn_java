@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--实现自动装配
+     bean 标签属性 autowire，配置自动装配
+     autowire 属性常用两个值：
+     byName 根据属性名称注入 ，注入值 bean 的 id 值和类属性名称一样  bead里的id和类里的属性值一样
+     byType 根据属性类型注入，根据dept的类型Dept找到它的对象，也就是这个bean标签，注入
+     当有两个dept类型的对象时，就不知道用哪一个了
+    -->
+    <bean id="emp" class="Spring5.day02IOC操作Bean管理.xml方式.xml自动装配.Emp" autowire="byType">
+        <!--<property name="dept" ref="dept"></property>-->
+
+    </bean>
+<!--    <bean id="dept1" class="Spring5.day02IOC操作Bean管理.xml方式.xml自动装配.Dept"></bean>-->
+    <bean id="dept" class="Spring5.day02IOC操作Bean管理.xml方式.xml自动装配.Dept"></bean>
+
+</beans>

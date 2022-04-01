@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--    &lt;!&ndash;2 set 方法注入属性&ndash;&gt;-->
+<!--    <bean id="book" class="Spring5.day02IOC操作Bean管理.xml方式.Book">-->
+<!--        &lt;!&ndash;使用 property 完成属性注入-->
+<!--         name：类里面属性名称-->
+<!--         value：向属性注入的值-->
+<!--         &ndash;&gt;-->
+<!--        <property name="bname" value="java"></property>-->
+<!--        <property name="bauthor" value="ao"></property>-->
+
+<!--    </bean>-->
+    <bean id="book" class="Spring5.day02IOC操作Bean管理.xml方式.注入属性.Book" p:bname="java_learn" p:bauthor="ccc"></bean>
+
+</beans>

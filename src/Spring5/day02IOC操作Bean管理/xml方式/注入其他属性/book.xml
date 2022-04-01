@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="book" class="Spring5.day02IOC操作Bean管理.xml方式.注入属性.Book">
+        <property name="bauthor">
+        <!--   字面量null值         -->
+            <null/>
+        </property>
+        <!--  属性值包含特殊符合
+              1、把<>进行转义
+              2、把带特殊符号内容写到CDATA
+              -->
+        <property name="bname">
+            <value><![CDATA[<<南京>>]]></value>
+        </property>
+    </bean>
+
+</beans>

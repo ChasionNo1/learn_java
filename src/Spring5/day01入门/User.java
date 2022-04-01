@@ -1,4 +1,4 @@
-package Spring5;
+package Spring5.day01入门;
 
 public class User {
 
