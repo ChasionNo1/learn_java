@@ -2,8 +2,6 @@ package 数据结构与算法.线性表.链式存储;
 
 import 数据结构与算法.线性表.抽象数据类型.IList;
 
-import java.util.Scanner;
-
 /**
  * 带头结点的单向链表
  *

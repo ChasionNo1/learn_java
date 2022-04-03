@@ -3,7 +3,6 @@ package 项目.项目五单机考试软件.view;
 import 项目.项目五单机考试软件.domain.Item;
 import 项目.项目五单机考试软件.service.ItemService;
 
-import java.util.Arrays;
 import java.util.Locale;
 import java.util.Scanner;
 

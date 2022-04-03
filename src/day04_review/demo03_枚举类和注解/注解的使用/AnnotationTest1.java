@@ -1,6 +1,5 @@
 package day04_review.demo03_枚举类和注解.注解的使用;
 
-import org.omg.CORBA.PUBLIC_MEMBER;
 import org.testng.annotations.Test;
 
 import java.lang.annotation.Annotation;

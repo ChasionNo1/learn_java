@@ -1,10 +1,5 @@
 package 数据结构和算法刷题.day02;
 
-import 数据结构与算法.树.二叉树.Node;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-
 /**
  * @program: test
  * @author: chasion

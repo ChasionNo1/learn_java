@@ -1,10 +1,8 @@
 package day04_review.demo07_网络编程.网络协议;
 
-import day04_review.demo06_io流.随机存取文件流.ByteArrayOutputStreamTest;
 import org.testng.annotations.Test;
 
 import java.io.*;
-import java.net.Inet6Address;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;

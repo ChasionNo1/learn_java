@@ -1,7 +1,5 @@
 package day04_review.demo05_泛型.泛型使用.exercise1;
 
-import java.time.LocalDate;
-
 
 /**
  * @program: test

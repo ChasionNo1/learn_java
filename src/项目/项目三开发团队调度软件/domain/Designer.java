@@ -1,7 +1,5 @@
 package 项目.项目三开发团队调度软件.domain;
 
-import 项目.项目三开发团队调度软件.service.Status;
-
 public class Designer extends Programmer {
     private double bonus;
     public Designer(){}

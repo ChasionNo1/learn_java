@@ -1,4 +1,4 @@
-package day03_review.demo03_面向对象.封装;
+package day03_review.demo03_面向对象.面向对象上.封装;
 /*
 this关键字的使用：
 1、this可以用来修饰：属性、方法、构造器

@@ -1,7 +1,5 @@
 package leetcode.二叉树;
 
-import 数据结构与算法.树.递归.Tree;
-
 /**
  * @program: test
  * @author: chasion

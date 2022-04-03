@@ -1,6 +1,5 @@
 package 数据结构与算法.图.最小生成树;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 /**

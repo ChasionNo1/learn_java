@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!-- 创建对象   -->
+    <bean id="book" class="Spring5.day03AOP.AOP操作.Aspect配置文件.Book"></bean>
+    <bean id="bookProxy" class="Spring5.day03AOP.AOP操作.Aspect配置文件.BookProxy"></bean>
+    <!-- 配置aop增强   -->
+    <aop:config>
+    <!--   配置切入点     -->
+        <aop:pointcut id="p" expression="execution(* Spring5.day03AOP.AOP操作.Aspect配置文件.Book.buy(..))"/>
+
+        <!--配置切面-->
+        <aop:aspect ref="bookProxy">
+        <!--  配置作用在具体的方法上          -->
+            <aop:before method="before" pointcut-ref="p"></aop:before>
+        </aop:aspect>
+    </aop:config>
+</beans>

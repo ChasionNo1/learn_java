@@ -1,10 +1,7 @@
 package 项目.项目五单机考试软件.test;
 
-import 项目.项目五单机考试软件.domain.Item;
 import 项目.项目五单机考试软件.service.ItemService;
 import 项目.项目五单机考试软件.view.ExamView;
-
-import java.util.List;
 
 /**
  * 程序入口类(main方法)

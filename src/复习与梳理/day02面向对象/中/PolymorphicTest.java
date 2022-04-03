@@ -2,8 +2,6 @@ package 复习与梳理.day02面向对象.中;
 
 import org.testng.annotations.Test;
 
-import java.sql.Struct;
-
 /**
  * 多态
  * 对象的多态性：父类的引用指向子类的对象（或子类的对象赋给父类的引用）

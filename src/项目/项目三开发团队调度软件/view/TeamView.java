@@ -5,9 +5,6 @@ import 项目.项目三开发团队调度软件.domain.Programmer;
 import 项目.项目三开发团队调度软件.service.NameListService;
 import 项目.项目三开发团队调度软件.service.TeamException;
 import 项目.项目三开发团队调度软件.service.TeamService;
-import 项目.项目三开发团队调度软件.view.TSUtility;
-
-import java.util.Scanner;
 
 public class TeamView {
     public static void main(String[] args) {

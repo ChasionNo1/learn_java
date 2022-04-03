@@ -1,4 +1,4 @@
-package 练习题.day01;
+package day01;
 
 /**
  * @program: test

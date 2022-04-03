@@ -1,6 +1,5 @@
 package day04_review.demo08_java反射机制.反射概述;
 
-import day04_review.demo03_枚举类和注解.枚举类的使用.EnumTest;
 import org.testng.annotations.Test;
 
 import java.util.Random;

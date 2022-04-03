@@ -1,7 +1,5 @@
 package 数据库.day01;
 
-import org.testng.annotations.Test;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Field;

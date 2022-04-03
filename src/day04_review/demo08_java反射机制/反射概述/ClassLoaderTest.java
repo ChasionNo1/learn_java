@@ -2,9 +2,7 @@ package day04_review.demo08_java反射机制.反射概述;
 
 import org.testng.annotations.Test;
 
-import java.io.FileInputStream;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.Properties;
 
 /**

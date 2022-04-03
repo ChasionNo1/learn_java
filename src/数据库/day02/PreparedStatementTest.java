@@ -1,9 +1,7 @@
 package 数据库.day02;
 
 import org.testng.annotations.Test;
-import 数据库.day01.StatementTest;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
