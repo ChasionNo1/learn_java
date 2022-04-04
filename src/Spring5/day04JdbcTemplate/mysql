@@ -1,0 +1,10 @@
+创建mydata数据库下的t_user表，有三个字段
+user_id  bigint  20
+username varchar 100
+ustatus varchar 50
+
+create table t_user(
+    user_id bigint(20) comment '用户id',
+    username varchar(100) comment '用户名',
+    ustatus varchar(50) comment '用户状态'
+) comment '用户表';

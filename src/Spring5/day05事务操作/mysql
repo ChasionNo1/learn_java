@@ -1,0 +1,8 @@
+create table t_account(
+    id varchar(10) comment '编号',
+    username varchar(20) comment '用户名',
+    money bigint comment '金额'
+)comment '账户';
+
+insert into t_account values('1','lucy',1000);
+insert into t_account values('2','mary',1000);
