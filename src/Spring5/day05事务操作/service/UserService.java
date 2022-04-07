@@ -3,10 +3,12 @@ package Spring5.day05事务操作.service;
 import Spring5.day05事务操作.dao.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-@Transactional
+//@Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.REPEATABLE_READ, timeout = 1, rollbackFor = Exception.class)
 public class UserService {
 
     // 注入dao
