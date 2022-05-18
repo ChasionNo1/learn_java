@@ -1,5 +1,10 @@
 package 设计模式.单例模式.双重检查;
 
+import org.junit.jupiter.api.Test;
+
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+
 /**
  * @ClassName SingletonTest04
  * @Description TODO
@@ -30,19 +35,60 @@ public class SingletonTest04 {
     4)结论:在实际开发中，推荐使用这种单例设计模式
 
     * */
+
+    // 使用反射破坏单例模式
+    @Test
+    public void test1() throws Exception {
+//        Singleton instance = Singleton.getInstance();
+        // 如果可以获取flag属性
+        Field flag = Singleton.class.getDeclaredField("flag");
+        Constructor<Singleton> declaredConstructor = Singleton.class.getDeclaredConstructor(null);
+        declaredConstructor.setAccessible(true);
+        // 两个都使用反射构造对象
+        Singleton instance = declaredConstructor.newInstance();
+        // 重新设置flag为false，仍然可以构造
+        flag.setAccessible(true);
+        flag.set(instance, false);
+        Singleton instance1 = declaredConstructor.newInstance();
+        // false
+        System.out.println(instance == instance1);
+
+    }
 }
 
 class Singleton{
 
+    // 使用一个加密属性，防止反射多次创建对象
+    private static boolean flag = false;
     private static volatile Singleton instance;
 
-    private Singleton(){}
+    private Singleton(){
+        synchronized (Singleton.class){
+            if (flag == false){
+                flag = true;
+            }else {
+                throw new RuntimeException("不要试图使用反射破坏异常");
+            }
+//            if (instance != null){
+//                throw new RuntimeException("不要试图使用反射破坏异常");
+//            }
+        }
+    }
 
     // 双重检查
     public static Singleton getInstance(){
         if (instance == null){
             synchronized (Singleton.class){
                 if (instance == null){
+                    // 不是一个原子性操作
+                    /**
+                     * 1、分配内存空间
+                     * 2、执行构造方法，初始化对象
+                     * 3、把这个对象指向这个空间
+                     *
+                     * 由于指令重排，可能132，此时还没完成构造
+                     * 使用volatile解决
+                     * */
                     instance = new Singleton();
                 }
             }

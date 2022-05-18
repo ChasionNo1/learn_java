@@ -2,6 +2,8 @@ package 设计模式.单例模式.枚举;
 
 import org.testng.annotations.Test;
 
+import java.lang.reflect.Constructor;
+
 /**
  * @ClassName SingletonTest06
  * @Description TODO
@@ -27,10 +29,17 @@ public class SingletonTest06 {
      * */
 
     @Test
-    public void test1() {
+    public void test1() throws Exception {
         Singleton instance = Singleton.INSTANCE;
         Singleton instance1 = Singleton.INSTANCE;
         System.out.println(instance == instance1);
+
+        // 使用反射创建对象
+        Constructor<Singleton> declaredConstructor = Singleton.class.getDeclaredConstructor(String.class, int.class);
+        declaredConstructor.setAccessible(true);
+        Singleton instance2 = declaredConstructor.newInstance();
+        // java.lang.IllegalArgumentException: Cannot reflectively create enum objects
+        System.out.println(instance == instance2);
     }
 }
 
