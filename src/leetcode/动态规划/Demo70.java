@@ -27,4 +27,20 @@ public class Demo70 {
         return dp[n];
 
     }
+
+    /**
+     * 进阶版：一步一个台阶、两个台阶、三个台阶、... 直到n个台阶，问有多少种不同方法可以爬到楼顶
+     * */
+    public int climbStairs(int n, int[] steps){
+        int[] dp = new int[n + 1];
+        dp[0] = 1;
+        for (int i = 0; i <= n; i++) {
+            for (int j = 0; j < steps.length; j++) {
+                if (i >= steps[j]){
+                    dp[i] += dp[i - steps[j]];
+                }
+            }
+        }
+        return dp[n];
+    }
 }
